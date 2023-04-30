@@ -3,15 +3,15 @@ collection_instances {
   id: "car"
   collection: "/main/car/car.collection"
   position {
-    x: 658.0
-    y: 454.0
+    x: 0.0
+    y: 0.0
     z: 0.0
   }
   rotation {
     x: 0.0
     y: 0.0
-    z: 0.0
-    w: 1.0
+    z: 0.19292894
+    w: 0.98121274
   }
   scale3 {
     x: 1.0

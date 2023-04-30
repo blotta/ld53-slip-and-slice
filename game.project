@@ -15,8 +15,12 @@ input_method = HiddenInputField
 title = LD53
 
 [render]
-clear_color_red = 0.2
-clear_color_green = 0.2
-clear_color_blue = 0.2
+clear_color_red = 0.4
+clear_color_green = 0.4
+clear_color_blue = 0.4
 clear_color_alpha = 255.0
+
+[physics]
+gravity_y = 0.0
+use_fixed_timestep = 1
 
