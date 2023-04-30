@@ -3,8 +3,948 @@ instances {
   id: "building"
   prototype: "/main/map/buildings/building_01.go"
   position {
-    x: -3320.0
-    y: 1414.0
+    x: -2785.0
+    y: 3120.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 0.651
+    y: 0.65
+    z: 1.0
+  }
+}
+instances {
+  id: "building_02"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: -2362.0
+    y: 3184.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_03"
+  prototype: "/main/map/buildings/building_03.go"
+  position {
+    x: -3184.0
+    y: 3153.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "tree"
+  prototype: "/main/map/buildings/tree.go"
+  position {
+    x: -3478.0
+    y: 3390.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "tree1"
+  prototype: "/main/map/buildings/tree.go"
+  position {
+    x: -3478.0
+    y: 3177.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "tree2"
+  prototype: "/main/map/buildings/tree.go"
+  position {
+    x: -3271.0
+    y: 3402.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.3822033
+    w: 0.9240783
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_"
+  prototype: "/main/map/buildings/building_03.go"
+  position {
+    x: -3299.0
+    y: 1411.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_1"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: -3279.0
+    y: 2106.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building1"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -2748.0
+    y: 2241.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.70710677
+    w: 0.70710677
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building2"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -3665.0
+    y: 585.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.177
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_2"
+  prototype: "/main/map/buildings/building_03.go"
+  position {
+    x: -2897.0
+    y: 560.0
+    z: 0.0
+  }
+  rotation {
+    x: -0.020904187
+    y: -0.021062257
+    z: 0.7094525
+    w: 0.7041282
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_3"
+  prototype: "/main/map/buildings/building_03.go"
+  position {
+    x: -2897.0
+    y: 233.0
+    z: 0.0
+  }
+  rotation {
+    x: -0.030372776
+    y: -6.9780956E-4
+    z: -0.9995384
+    w: 2.1204201E-5
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building3"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -814.0
+    y: 273.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.83839554
+    w: 0.5450623
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building4"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -876.0
+    y: 1246.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.9801094
+    w: -0.19845808
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building5"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: 86.0
+    y: -111.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.9801094
+    w: -0.19845808
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building6"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -2645.0
+    y: 1404.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building7"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -1910.0
+    y: 1404.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.70710677
+    w: 0.70710677
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_4"
+  prototype: "/main/map/buildings/building_03.go"
+  position {
+    x: -1880.0
+    y: -1095.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 1.0
+    w: 6.123234E-17
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_5"
+  prototype: "/main/map/buildings/building_03.go"
+  position {
+    x: 450.0
+    y: 1398.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 1.0
+    w: 6.123234E-17
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building8"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -3256.0
+    y: -2324.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building9"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -2009.0
+    y: -2285.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_6"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: -2715.0
+    y: -2332.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_7"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: -761.0
+    y: -2338.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_8"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: 2127.0
+    y: 1304.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building10"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: 2196.0
+    y: 2789.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_9"
+  prototype: "/main/map/buildings/building_03.go"
+  position {
+    x: 3115.0
+    y: 2969.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 1.0
+    w: 6.123234E-17
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building11"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -1810.0
+    y: 3197.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building12"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -820.0
+    y: 3160.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.70710677
+    w: 0.70710677
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building13"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -703.0
+    y: 2294.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_10"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: 29.0
+    y: 2575.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.47238657
+    w: 0.88139147
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_11"
+  prototype: "/main/map/buildings/building_03.go"
+  position {
+    x: 141.0
+    y: 3185.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 1.0
+    w: 6.123234E-17
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building14"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: 1624.0
+    y: 348.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.5395171
+    w: 0.8419747
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building15"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: 2323.0
+    y: -1.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.2581841
+    w: 0.96609575
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_12"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: 2402.0
+    y: -3376.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.15293282
+    w: 0.9882366
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building16"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: 3354.0
+    y: -2870.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.42516395
+    w: 0.9051163
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building17"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -775.0
+    y: -1786.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.70710677
+    w: 0.70710677
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building18"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: 134.0
+    y: -1780.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.70710677
+    w: 0.70710677
+  }
+  scale3 {
+    x: 0.752
+    y: 0.764
+    z: 1.0
+  }
+}
+instances {
+  id: "building19"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -731.0
+    y: -1363.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_13"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: -152.0
+    y: -1236.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.937982
+    w: 0.3466839
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_14"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: -892.0
+    y: -751.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_15"
+  prototype: "/main/map/buildings/building_03.go"
+  position {
+    x: -2564.0
+    y: -529.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 1.0
+    w: 6.123234E-17
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building20"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -3154.0
+    y: -1234.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.70710677
+    w: 0.70710677
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building21"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -1953.0
+    y: -1732.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.70710677
+    w: 0.70710677
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building22"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -3216.0
+    y: -1856.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_16"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: -3232.0
+    y: -683.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.70710677
+    w: 0.70710677
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building23"
+  prototype: "/main/map/buildings/building_01.go"
+  position {
+    x: -1816.0
+    y: -605.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_17"
+  prototype: "/main/map/buildings/building_02.go"
+  position {
+    x: 457.0
+    y: 734.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.70710677
+    w: 0.70710677
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "building_18"
+  prototype: "/main/map/buildings/building_03.go"
+  position {
+    x: 287.0
+    y: -2406.0
     z: 0.0
   }
   rotation {
@@ -20,353 +960,6 @@ instances {
   }
 }
 scale_along_z: 0
-embedded_instances {
-  id: "map-collision"
-  data: "embedded_components {\n"
-  "  id: \"sprite\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/main/map/map.atlas\\\"\\n"
-  "default_animation: \\\"map-above\\\"\\n"
-  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  scale {\n"
-  "    x: 4.0\n"
-  "    y: 4.0\n"
-  "    z: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"collisionobject\"\n"
-  "  type: \"collisionobject\"\n"
-  "  data: \"collision_shape: \\\"\\\"\\n"
-  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
-  "mass: 0.0\\n"
-  "friction: 0.1\\n"
-  "restitution: 0.5\\n"
-  "group: \\\"default\\\"\\n"
-  "mask: \\\"default\\\"\\n"
-  "embedded_collision_shape {\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_BOX\\n"
-  "    position {\\n"
-  "      x: -3279.0\\n"
-  "      y: 2186.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 0\\n"
-  "    count: 3\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_BOX\\n"
-  "    position {\\n"
-  "      x: -3189.0\\n"
-  "      y: 2180.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 3\\n"
-  "    count: 3\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_BOX\\n"
-  "    position {\\n"
-  "      x: -2340.0\\n"
-  "      y: 3192.5\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 6\\n"
-  "    count: 3\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_BOX\\n"
-  "    position {\\n"
-  "      x: -2248.0\\n"
-  "      y: 3186.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 9\\n"
-  "    count: 3\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_BOX\\n"
-  "    position {\\n"
-  "      x: -3187.0\\n"
-  "      y: 3218.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 12\\n"
-  "    count: 3\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_BOX\\n"
-  "    position {\\n"
-  "      x: -3087.5\\n"
-  "      y: 3063.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 15\\n"
-  "    count: 3\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_BOX\\n"
-  "    position {\\n"
-  "      x: -2803.0\\n"
-  "      y: 3117.5\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 18\\n"
-  "    count: 3\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_BOX\\n"
-  "    position {\\n"
-  "      x: -1694.5\\n"
-  "      y: 3103.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 21\\n"
-  "    count: 3\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_BOX\\n"
-  "    position {\\n"
-  "      x: -2757.0\\n"
-  "      y: 2274.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 24\\n"
-  "    count: 3\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_SPHERE\\n"
-  "    position {\\n"
-  "      x: -3495.0\\n"
-  "      y: 2504.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 27\\n"
-  "    count: 1\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_SPHERE\\n"
-  "    position {\\n"
-  "      x: -3252.0\\n"
-  "      y: 2551.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 28\\n"
-  "    count: 1\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_SPHERE\\n"
-  "    position {\\n"
-  "      x: -3508.0\\n"
-  "      y: 3152.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 29\\n"
-  "    count: 1\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_SPHERE\\n"
-  "    position {\\n"
-  "      x: -3459.0\\n"
-  "      y: 3406.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 30\\n"
-  "    count: 1\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_SPHERE\\n"
-  "    position {\\n"
-  "      x: -3171.0\\n"
-  "      y: 3438.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 31\\n"
-  "    count: 1\\n"
-  "  }\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_SPHERE\\n"
-  "    position {\\n"
-  "      x: -1664.0\\n"
-  "      y: 3407.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 32\\n"
-  "    count: 1\\n"
-  "  }\\n"
-  "  data: 166.458\\n"
-  "  data: 76.0735\\n"
-  "  data: 14.95\\n"
-  "  data: 75.752\\n"
-  "  data: 168.7655\\n"
-  "  data: 10.0\\n"
-  "  data: 164.945\\n"
-  "  data: 70.665\\n"
-  "  data: 10.0\\n"
-  "  data: 73.3165\\n"
-  "  data: 169.6225\\n"
-  "  data: 10.0\\n"
-  "  data: 174.854\\n"
-  "  data: 70.665\\n"
-  "  data: 10.0\\n"
-  "  data: 75.4345\\n"
-  "  data: 94.991\\n"
-  "  data: 10.0\\n"
-  "  data: 89.7695\\n"
-  "  data: 70.981\\n"
-  "  data: 10.0\\n"
-  "  data: 194.5975\\n"
-  "  data: 140.281\\n"
-  "  data: 10.0\\n"
-  "  data: 214.4695\\n"
-  "  data: 350.3345\\n"
-  "  data: 10.0\\n"
-  "  data: 152.402\\n"
-  "  data: 162.884\\n"
-  "  data: 133.0905\\n"
-  "  data: 134.3985\\n"
-  "  data: 130.2855\\n"
-  "  data: 128.876\\n"
-  "}\\n"
-  "linear_damping: 0.0\\n"
-  "angular_damping: 0.0\\n"
-  "locked_rotation: true\\n"
-  "bullet: false\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
-  position {
-    x: 0.0
-    y: 0.0
-    z: 1.1
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
 embedded_instances {
   id: "map-under"
   data: "embedded_components {\n"
@@ -527,11 +1120,78 @@ embedded_instances {
 embedded_instances {
   id: "buildings"
   children: "building"
+  children: "building1"
+  children: "building10"
+  children: "building11"
+  children: "building12"
+  children: "building13"
+  children: "building14"
+  children: "building15"
+  children: "building16"
+  children: "building17"
+  children: "building18"
+  children: "building19"
+  children: "building2"
+  children: "building20"
+  children: "building21"
+  children: "building22"
+  children: "building23"
+  children: "building3"
+  children: "building4"
+  children: "building5"
+  children: "building6"
+  children: "building7"
+  children: "building8"
+  children: "building9"
+  children: "building_"
+  children: "building_02"
+  children: "building_03"
+  children: "building_1"
+  children: "building_10"
+  children: "building_11"
+  children: "building_12"
+  children: "building_13"
+  children: "building_14"
+  children: "building_15"
+  children: "building_16"
+  children: "building_17"
+  children: "building_18"
+  children: "building_2"
+  children: "building_3"
+  children: "building_4"
+  children: "building_5"
+  children: "building_6"
+  children: "building_7"
+  children: "building_8"
+  children: "building_9"
   data: ""
   position {
     x: 0.0
     y: 0.0
     z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "trees"
+  children: "tree"
+  children: "tree1"
+  children: "tree2"
+  data: ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.1
   }
   rotation {
     x: 0.0

@@ -23,8 +23,8 @@ collection_instances {
   id: "car"
   collection: "/main/car/car.collection"
   position {
-    x: 0.0
-    y: 0.0
+    x: -3669.0
+    y: 1781.0
     z: 1.0
   }
   rotation {
