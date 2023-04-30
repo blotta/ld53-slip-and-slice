@@ -1,3 +1,18 @@
+components {
+  id: "building"
+  component: "/main/map/buildings/building.script"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
 embedded_components {
   id: "sprite"
   type: "sprite"
@@ -45,8 +60,8 @@ embedded_components {
   "    index: 0\n"
   "    count: 3\n"
   "  }\n"
-  "  data: 168.978\n"
-  "  data: 138.738\n"
+  "  data: 194.776\n"
+  "  data: 163.2685\n"
   "  data: 10.0\n"
   "}\n"
   "linear_damping: 0.0\n"
