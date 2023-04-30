@@ -1,6 +1,23 @@
 go.property("tintcolor", vmath.vector4(1,0, 0, 1))
 
+local colors = {
+  {255, 92, 77},
+  {255, 150, 54},
+  {255, 205, 88},
+  { 91, 176, 186 },
+  { 160, 106, 180 }
+}
+
+local function get_random_color()
+  local color = colors[math.random(#colors)]
+  color = vmath.vector4(color[1] / 255.0, color[2] / 255.0, color[3] / 255.0, 1)
+  print(color)
+  return color
+end
+
 function init(self)
+  local color = get_random_color()
+  self.tintcolor = color
   go.set("#sprite", "tint", self.tintcolor)
 end
 
