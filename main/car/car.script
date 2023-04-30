@@ -7,14 +7,14 @@ end
 function init(self)
   self.wheel_base = 100
   self.steering_angle = 15
-  self.engine_power = 2400
-  self.friction = -0.8
+  self.engine_power = 3700
+  self.friction = -0.5
   self.drag = -0.001
   self.braking = -450
   self.max_speed_reverse = 350
   self.slip_speed = 350
   self.traction_fast = 0.04
-  self.traction_slow = 0.7
+  self.traction_slow = 0.4
 
   self.acceleration = vmath.vector3()
   self.velocity = vmath.vector3()
@@ -113,8 +113,8 @@ function fixed_update(self, dt)
   if vmath.length_sqr(self.correction) > 0 then
     -- self.velocity = vmath.project(self.velocity, self.correction) * vmath.length(self.velocity)
     -- print(self.velocity)
-    if self.correction.x ~= 0 then self.velocity.x = 0 end
-    if self.correction.y ~= 0 then self.velocity.y = 0 end
+    if self.correction.x ~= 0 then self.velocity.x = self.velocity.x * 0.1 end
+    if self.correction.y ~= 0 then self.velocity.y = self.velocity.y * 0.1 end
     -- self.velocity = vmath.vector3()
   end
 
