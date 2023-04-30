@@ -26,6 +26,6 @@ Vehicles break down in the town and you have to use a tow truck to bring them to
 
 - [X] Top down car driving with drift 
 - [ ] Add scenery
-- [ ] Collisions
+- [X] Collisions
 - [ ] Define main idea
 - [ ] 
