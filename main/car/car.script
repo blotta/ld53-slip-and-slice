@@ -12,6 +12,9 @@ function init(self)
   self.drag = -0.001
   self.braking = -450
   self.max_speed_reverse = 250
+  self.slip_speed = 400
+  self.traction_fast = 0.03
+  self.traction_slow = 0.7
 
   self.acceleration = vmath.vector3()
   self.velocity = vmath.vector3()
@@ -72,9 +75,14 @@ function fixed_update(self, dt)
   front_wheel = front_wheel + front_wheel_vel * dt
 
   local new_heading = vmath.normalize(front_wheel - rear_wheel)
+  traction = self.traction_slow
+  if vmath.length(self.velocity) > self.slip_speed then
+    traction = self.traction_fast
+  end
   local dot = vmath.dot(new_heading, self.velocity)
   if dot > 0 then
-    self.velocity = new_heading * vmath.length(self.velocity)
+    -- self.velocity = new_heading * vmath.length(self.velocity)
+    self.velocity = vmath.lerp(traction, self.velocity, new_heading * vmath.length(self.velocity))
   elseif dot < 0 then
     self.velocity = -1 * new_heading * math.min(vmath.length(self.velocity), self.max_speed_reverse)
   end
