@@ -1,1 +1,13 @@
-require('debugger.debugger').start()
+-- function init(self)
+
+--   msg.post("/main#camera", "acquire_camera_focus")
+--   msg.post("@render:","use_camera_projection")
+--   print("Caaar", go.get_position("/car/car"))
+-- end
+
+-- function on_message(self, message_id, message)
+--   if message_id == hash("set_view_projection") then
+--     self.view = message.view
+--     self.projection = message.projection
+--   end
+-- end

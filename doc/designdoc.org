@@ -1,0 +1,31 @@
+* Ludum Dare 53
+
+Theme: Delivery
+
+Engine: Defold
+
+
+** Ideas
+
+Continue using the mechanics from Crazy Golf Cart for something delivery related.
+
+Many people will make food or mail delivery based games. Try to do something more original.
+
+*** Car delivery?
+
+Where you deliver different cars to people across town.
+- Would need to implement getting in and out of vehicles
+  
+
+*** Towing game.
+
+Vehicles break down in the town and you have to use a tow truck to bring them to the yard
+- May have finicky joint mechanics
+
+** Mechanics
+
+- [X] Top down car driving with drift 
+- [ ] Add scenery
+- [ ] Collisions
+- [ ] Define main idea
+- [ ] 
