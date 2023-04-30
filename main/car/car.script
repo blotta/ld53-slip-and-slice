@@ -82,7 +82,6 @@ function fixed_update(self, dt)
   local cmp = new_heading
   if vmath.length_sqr(self.velocity) > 0 then cmp = vmath.normalize(self.velocity) end
   local dot = vmath.dot(new_heading, cmp)
-  print(dot)
   if dot >= 0 then
     -- self.velocity = new_heading * vmath.length(self.velocity)
     self.velocity = vmath.lerp(traction, self.velocity, new_heading * vmath.length(self.velocity))
