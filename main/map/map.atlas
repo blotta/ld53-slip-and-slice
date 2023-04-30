@@ -1,9 +1,13 @@
 images {
-  image: "/assets/images/map.png"
+  image: "/assets/images/building_01.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/assets/images/building_01.png"
+  image: "/assets/images/map-above.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/assets/images/map-under.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 margin: 0

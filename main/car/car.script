@@ -7,11 +7,11 @@ end
 function init(self)
   self.wheel_base = 100
   self.steering_angle = 15
-  self.engine_power = 1400
+  self.engine_power = 2400
   self.friction = -0.8
   self.drag = -0.001
   self.braking = -450
-  self.max_speed_reverse = 250
+  self.max_speed_reverse = 350
   self.slip_speed = 350
   self.traction_fast = 0.04
   self.traction_slow = 0.7
