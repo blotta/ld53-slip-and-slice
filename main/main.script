@@ -60,16 +60,16 @@ local function check_win(self, pizza_count)
 end
 
 function init(self)
+  self.start_waiting = 1
 
   self.buildings_count = 44
   self.waiting_delivery = {}
   -- go.set("#pizzas_to_pickup_label", "Text", self.pizzas_to_pickup)
   -- go.set_text("#pizzas_to_pickup_label", self.pizzas_to_pickup)
 
-  -- for i = 1, 3, 1 do
-  --   requested_pizza(self)
-  -- end
-  requested_pizza(self)
+  for i = 1, self.start_waiting, 1 do
+    requested_pizza(self)
+  end
 
   -- for index, b in ipairs(self.waiting_delivery) do
   --   print(b)

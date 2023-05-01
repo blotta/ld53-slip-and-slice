@@ -28,6 +28,15 @@ function init(self)
 
   -- msg.post(".", "acquire_input_focus")
 
+  sound.play("#engine_sound", {speed = 0.2, gain = 0.06})
+
+end
+
+function update(self, dt)
+  local engine_perc = math.min(1, vmath.length_sqr(self.velocity) / (1500 * 1500.0))
+  local engine_sound_speed = 0.2 + (0.7 * engine_perc)
+  print(vmath.length(self.velocity), vmath.length_sqr(self.velocity), engine_perc)
+  go.set('#engine_sound', 'speed', engine_sound_speed)
 end
 
 
@@ -83,11 +92,13 @@ function fixed_update(self, dt)
 
   if dot < 0.95 and traction == self.traction_fast and self.tiremarks_playing == false then
     particlefx.play('under_car#tiremarks')
+    sound.play('#tire_sound', {speed = 0.85 + math.random() * 0.1, gain = 0.3 + math.random() * 0.1})
     self.tiremarks_playing = true
   end
 
   if (dot >= 0.95 or traction == self.traction_slow) and self.tiremarks_playing == true then
     particlefx.stop('under_car#tiremarks')
+    sound.stop('#tire_sound')
     self.tiremarks_playing = false
   end
 
@@ -145,6 +156,14 @@ function on_message(self, message_id, message, sender)
     end
   end
 
+  if message_id == hash('input_control') then
+    if message.enabled then
+      msg.post('.', 'acquire_input_focus')
+    else
+      msg.post('.', 'release_input_focus')
+      self.input = vmath.vector3()
+    end
+  end
 
 end
 

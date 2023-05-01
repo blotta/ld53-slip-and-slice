@@ -36,14 +36,16 @@ local function start_session(self)
   local node = gui.get_node('start_panel')
   gui.set_enabled(node, false)
   msg.post(".", "release_input_focus")
-  msg.post('/car/car#car', 'acquire_input_focus')
+  -- msg.post('/car/car#car', 'acquire_input_focus')
+  msg.post('/car/car#car', 'input_control', {enabled = true})
   msg.post("/main#main", 'start_session')
 end
 
 local function end_session(self)
   local node = gui.get_node('end_panel')
   gui.set_enabled(node, true)
-  msg.post('/car/car#car', 'release_input_focus')
+  -- msg.post('/car/car#car', 'release_input_focus')
+  msg.post('/car/car#car', 'input_control', {enabled = false})
   msg.post(".", "acquire_input_focus")
   self.ended = true
   self.dialog_idx = 0
