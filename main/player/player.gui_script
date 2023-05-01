@@ -67,7 +67,7 @@ function on_message(self, message_id, message, sender)
   if message_id == hash("update_pizza_count") then
     -- set the score counter to new score
     local pizza_count_node = gui.get_node("pizza_count")
-    gui.set_text(pizza_count_node, "PIZZAS: " .. message.pizza_count .. '/8')
+    gui.set_text(pizza_count_node, "" .. message.pizza_count .. '/8')
   end
 
   if message_id == hash("update_waiting_count") then
