@@ -50,6 +50,15 @@ local function pizza_order_timer_cb(self, handle, elapsed)
   end
 end
 
+local function check_win(self, pizza_count)
+  local w = #self.waiting_delivery
+
+  if w == 0 and pizza_count == 0 then
+    print('WIN!')
+    msg.post('/interface#player_gui', "end_session")
+  end
+end
+
 function init(self)
 
   self.buildings_count = 44
@@ -57,13 +66,14 @@ function init(self)
   -- go.set("#pizzas_to_pickup_label", "Text", self.pizzas_to_pickup)
   -- go.set_text("#pizzas_to_pickup_label", self.pizzas_to_pickup)
 
-  for i = 1, 10, 1 do
-    requested_pizza(self)
-  end
+  -- for i = 1, 3, 1 do
+  --   requested_pizza(self)
+  -- end
+  requested_pizza(self)
+
   -- for index, b in ipairs(self.waiting_delivery) do
   --   print(b)
   -- end
-  self.pizza_order_timer = timer.delay(2, true, pizza_order_timer_cb)
 end
 
 function on_message(self, message_id, message, sender)
@@ -75,9 +85,16 @@ function on_message(self, message_id, message, sender)
   end
 
   if message_id == hash('pizza_delivered') then
-    -- print('pizza delivered to', message.building_id)
-    -- local b = go.get_id(message.building_id)
-    delivered_pizza(self, message.building_id)
+    print('pizza_delivered sender', sender)
+      delivered_pizza(self, message.building_id)
+  end
 
+  if message_id == hash('pizza_count_update') then
+    -- check_win(self, message.pizza_count)
+    timer.delay(0.2, false, function() check_win(self, message.pizza_count) end)
+  end
+
+  if message_id == hash('start_session') then
+    self.pizza_order_timer = timer.delay(200, true, pizza_order_timer_cb)
   end
 end

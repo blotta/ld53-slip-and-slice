@@ -1,20 +1,64 @@
+local start_dialog = {
+  'Welcome to your first day as a pizza delivery person!',
+  "I'm the owner of this fine restaurant. We... well, I, serve the best and only pizzas around town.",
+  'I know you were a stunt person and used to drift cars around, but this here is REAL WORK!',
+  'The town is hungry for our fresh pizzas, so don\'t let them down.',
+  'I\'ll hold down the fort, take the orders and make the pizzas, while you get them around town.',
+  'Is that you car?! Doesn\'t seem like you can carry too much in there.',
+  'Oh, well. It will have to do. Just be sure to come back to pickup more pizzas!',
+  'Our work is done when you\'ve delivered all the pizzas and there are no more orders, so be quick about it!',
+  'Let\'s start!'
+}
+
+local end_dialog = {
+  'WELL DONE!',
+  'I don\'t know how you did it, but you were able to deliver ALL the orders!',
+  "Oh, wait! I know how you did it!",
+  "YOU WENT THROUGH PEOPLE'S BACKYARDS AND KNOCKED A FEW MAILBOXES ON THE WAY!",
+  "Mrs Mayers is pissed about her daisies being thorn apart on your windshield!",
+  "It will be months of hard work to get rid of those tiremaks around town!",
+  "On top of that, the only phone calls I get now are the ones complaining about you. Nobody wants anything to do with pizza.",
+  "I guess that's what I get for trying to go with cheap labor...",
+  'You\'re fired!'
+}
+
+local function step_dialog(self, node_id, dialog)
+  self.dialog_idx = self.dialog_idx + 1
+  if self.dialog_idx > #dialog then
+    return true
+  end
+  local node = gui.get_node(node_id)
+  gui.set_text(node, dialog[self.dialog_idx])
+  return false
+end
+
+local function start_session(self)
+  local node = gui.get_node('start_panel')
+  gui.set_enabled(node, false)
+  msg.post(".", "release_input_focus")
+  msg.post('/car/car#car', 'acquire_input_focus')
+  msg.post("/main#main", 'start_session')
+end
+
+local function end_session(self)
+  local node = gui.get_node('end_panel')
+  gui.set_enabled(node, true)
+  msg.post('/car/car#car', 'release_input_focus')
+  msg.post(".", "acquire_input_focus")
+  self.ended = true
+  self.dialog_idx = 0
+  step_dialog(self, 'end_dialog_text', end_dialog)
+end
+
 function init(self)
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+  self.dialog_idx = 0
+  self.ended = false
+
+  step_dialog(self, 'start_dialog_text', start_dialog)
+  msg.post(".", "acquire_input_focus")
+
 end
 
-function final(self)
-	-- Add finalization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
 
 function on_message(self, message_id, message, sender)
 	-- Add message-handling code here
@@ -31,18 +75,41 @@ function on_message(self, message_id, message, sender)
     local node = gui.get_node("waiting_count")
     gui.set_text(node, "" .. message.waiting_count .. '/' .. message.building_count)
   end
+
+  if message_id == hash('end_session') then
+    end_session(self)
+  end
 end
 
 function on_input(self, action_id, action)
-	-- Add input-handling code here. The game object this script is attached to
-	-- must have acquired input focus:
-	--
-	--    msg.post(".", "acquire_input_focus")
-	--
-	-- All mapped input bindings will be received. Mouse and touch input will
-	-- be received regardless of where on the screen it happened.
-	-- Learn more: https://defold.com/manuals/input/
-	-- Remove this function if not needed
+
+
+  if action_id == hash('touch') and action.pressed then
+
+    if not self.ended then
+      local next_btn = gui.get_node('next_button')
+      if gui.pick_node(next_btn, action.x, action.y) then
+        local done = step_dialog(self, 'start_dialog_text', start_dialog)
+        if done then
+          start_session()
+        end
+      end
+    else
+      local next_btn = gui.get_node('next_button2')
+      if gui.pick_node(next_btn, action.x, action.y) then
+        local done = step_dialog(self, 'end_dialog_text', end_dialog)
+        if done then
+          -- start_session()
+          print('doneeeeee')
+          msg.post('@system:', "exit", {code = 0})
+        end
+      end
+
+    end
+
+
+  end
+
 end
 
 function on_reload(self)
