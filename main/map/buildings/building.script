@@ -1,5 +1,3 @@
-go.property("tintcolor", vmath.vector4(1, 0, 0, 1))
-go.property("target_spawn_dir", vmath.vector3(1, 0, 0))
 
 local colors = {
   {155, 92, 77},
@@ -19,6 +17,8 @@ function init(self)
   local color = get_random_color()
   self.tintcolor = color
   go.set("#sprite", "tint", self.tintcolor)
+
+  self.target_spawn_dir = vmath.rotate(go.get_rotation(), vmath.vector3(0, -1, 0))
 
   self.waiting_pizza = false
 end
