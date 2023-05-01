@@ -16,6 +16,10 @@ end
 
 
 local function requested_pizza(self)
+  if #self.waiting_delivery >= self.buildings_count then
+    return
+  end
+
   local building_id = '/map/building' .. (math.random(self.buildings_count) - 1)
   -- while self.waiting_delivery[hash(building_id)] do
   while contains(self.waiting_delivery, hash(building_id)) do
@@ -47,6 +51,7 @@ end
 local function pizza_order_timer_cb(self, handle, elapsed)
   if math.random() > 0.5 then
     requested_pizza(self)
+    sound.play('#order_bell')
   end
 end
 
@@ -55,12 +60,15 @@ local function check_win(self, pizza_count)
 
   if w == 0 and pizza_count == 0 then
     print('WIN!')
+    sound.play('#success_bell')
+    timer.cancel(self.pizza_order_timer)
     msg.post('/interface#player_gui', "end_session")
   end
 end
 
 function init(self)
-  self.start_waiting = 1
+  self.start_waiting = 10
+  self.pizza_order_cb_interval = 3 -- 3 hard, 4 medium, 5 easy
 
   self.buildings_count = 44
   self.waiting_delivery = {}
@@ -95,6 +103,6 @@ function on_message(self, message_id, message, sender)
   end
 
   if message_id == hash('start_session') then
-    self.pizza_order_timer = timer.delay(200, true, pizza_order_timer_cb)
+    self.pizza_order_timer = timer.delay(self.pizza_order_cb_interval, true, pizza_order_timer_cb)
   end
 end

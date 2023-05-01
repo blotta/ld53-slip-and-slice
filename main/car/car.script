@@ -22,6 +22,7 @@ function init(self)
 
   self.input = vmath.vector3()
   self.tiremarks_playing = false
+  self.crash_playing = false
 
   -- kinematic collicion correction
   self.correction = vmath.vector3()
@@ -35,7 +36,7 @@ end
 function update(self, dt)
   local engine_perc = math.min(1, vmath.length_sqr(self.velocity) / (1500 * 1500.0))
   local engine_sound_speed = 0.2 + (0.7 * engine_perc)
-  print(vmath.length(self.velocity), vmath.length_sqr(self.velocity), engine_perc)
+  -- print(vmath.length(self.velocity), vmath.length_sqr(self.velocity), engine_perc)
   go.set('#engine_sound', 'speed', engine_sound_speed)
 end
 
@@ -152,6 +153,13 @@ function on_message(self, message_id, message, sender)
         go.set_position(go.get_position() + comp)
         -- Accumulate correction done
         self.correction = self.correction + comp
+      end
+
+      print(vmath.length_sqr(self.velocity), (200 * 200))
+      if vmath.length_sqr(self.velocity) > (200 * 200) and self.crash_playing == false then
+        local s = '#crash_0' .. math.random(1,3)
+        self.crash_playing = true
+        sound.play(s, nil, function() self.crash_playing = false end)
       end
     end
   end
