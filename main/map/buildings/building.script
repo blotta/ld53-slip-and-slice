@@ -1,7 +1,8 @@
-go.property("tintcolor", vmath.vector4(1,0, 0, 1))
+go.property("tintcolor", vmath.vector4(1, 0, 0, 1))
+go.property("target_spawn_dir", vmath.vector3(1, 0, 0))
 
 local colors = {
-  {255, 92, 77},
+  {155, 92, 77},
   {255, 150, 54},
   {255, 205, 88},
   { 91, 176, 186 },
@@ -11,7 +12,6 @@ local colors = {
 local function get_random_color()
   local color = colors[math.random(#colors)]
   color = vmath.vector4(color[1] / 255.0, color[2] / 255.0, color[3] / 255.0, 1)
-  print(color)
   return color
 end
 
@@ -19,49 +19,28 @@ function init(self)
   local color = get_random_color()
   self.tintcolor = color
   go.set("#sprite", "tint", self.tintcolor)
-end
 
-function final(self)
-	-- Add finalization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function fixed_update(self, dt)
-	-- This function is called if 'Fixed Update Frequency' is enabled in the Engine section of game.project
-	-- Can be coupled with fixed updates of the physics simulation if 'Use Fixed Timestep' is enabled in
-	-- Physics section of game.project
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+  self.waiting_pizza = false
 end
 
 function on_message(self, message_id, message, sender)
 	-- Add message-handling code here
 	-- Learn more: https://defold.com/manuals/message-passing/
 	-- Remove this function if not needed
-end
+  if message_id == hash("requested_pizza") then
+    print('they told me I requested a pizza ', msg.url())
+    self.waiting_pizza = true
+    local props = {}
+    props[hash("/target")] = { building_id = msg.url(), abool = true}
+    pprint(props)
+    local ids = collectionfactory.create("#collectionfactory", nil, nil, props)
 
-function on_input(self, action_id, action)
-	-- Add input-handling code here. The game object this script is attached to
-	-- must have acquired input focus:
-	--
-	--    msg.post(".", "acquire_input_focus")
-	--
-	-- All mapped input bindings will be received. Mouse and touch input will
-	-- be received regardless of where on the screen it happened.
-	-- Learn more: https://defold.com/manuals/input/
-	-- Remove this function if not needed
-end
+    -- local ids = collectionfactory.create("#collectionfactory")
+    -- for key, value in pairs(ids) do
+    --   print(key, value)
+    --   go.set(key, 'building_id', go.get_id())
+    -- end
 
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Learn more: https://defold.com/manuals/hot-reload/
-	-- Remove this function if not needed
+    pprint(ids)
+  end
 end

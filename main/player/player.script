@@ -4,7 +4,9 @@ function init(self)
 	-- Remove this function if not needed
   -- local to = vmath.vector3(300, 500, 0)
   -- go.animate(".", "position", go.PLAYBACK_LOOP_PINGPONG, to, go.EASING_OUTSINE, 1)
-  msg.post('.', "acquire_input_focus")
+  self.pizza_count = 0
+  self.max_pizzas = 8
+  msg.post('/interface#player_gui', "update_pizza_count", { pizza_count = self.pizza_count })
 end
 
 function final(self)
@@ -17,6 +19,8 @@ function update(self, dt)
 	-- Add update code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
+
+  
 end
 
 function fixed_update(self, dt)
@@ -32,6 +36,23 @@ function on_message(self, message_id, message, sender)
 	-- Add message-handling code here
 	-- Learn more: https://defold.com/manuals/message-passing/
 	-- Remove this function if not needed
+  -- pickup pizzas
+  if message_id == hash("trigger_response") then
+    print(message.other_id)
+    if message.other_id == hash('/main') then
+      if message.enter then
+        local ptp = go.get('/main#main', 'pizzas_to_pickup')
+        print(ptp .. ' pizzas to pickup')
+        local cap = self.max_pizzas - self.pizza_count
+        ptp = math.min(cap, ptp)
+        self.pizza_count = self.pizza_count + ptp
+        msg.post('/main#main', 'picked_up_pizzas', {amount=ptp})
+        msg.post('/interface#player_gui', "update_pizza_count", { pizza_count = self.pizza_count })
+      else
+        print('delivering pizzas')
+      end
+    end
+  end
 end
 
 function on_input(self, action_id, action)

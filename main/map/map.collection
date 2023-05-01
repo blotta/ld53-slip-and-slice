@@ -1,6 +1,6 @@
 name: "map"
 instances {
-  id: "building"
+  id: "building0"
   prototype: "/main/map/buildings/building_01.go"
   position {
     x: -2785.0
@@ -20,7 +20,7 @@ instances {
   }
 }
 instances {
-  id: "building_02"
+  id: "building26"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: -2362.0
@@ -40,7 +40,7 @@ instances {
   }
 }
 instances {
-  id: "building_03"
+  id: "building28"
   prototype: "/main/map/buildings/building_03.go"
   position {
     x: -3184.0
@@ -60,7 +60,7 @@ instances {
   }
 }
 instances {
-  id: "building_"
+  id: "building24"
   prototype: "/main/map/buildings/building_03.go"
   position {
     x: -3299.0
@@ -80,7 +80,7 @@ instances {
   }
 }
 instances {
-  id: "building_1"
+  id: "building25"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: -3279.0
@@ -240,7 +240,7 @@ instances {
   }
 }
 instances {
-  id: "building_4"
+  id: "building29"
   prototype: "/main/map/buildings/building_03.go"
   position {
     x: -1880.0
@@ -260,7 +260,7 @@ instances {
   }
 }
 instances {
-  id: "building_5"
+  id: "building30"
   prototype: "/main/map/buildings/building_03.go"
   position {
     x: 450.0
@@ -320,7 +320,7 @@ instances {
   }
 }
 instances {
-  id: "building_6"
+  id: "building31"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: -2715.0
@@ -340,7 +340,7 @@ instances {
   }
 }
 instances {
-  id: "building_7"
+  id: "building32"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: -761.0
@@ -360,7 +360,7 @@ instances {
   }
 }
 instances {
-  id: "building_8"
+  id: "building33"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: 2127.0
@@ -400,7 +400,7 @@ instances {
   }
 }
 instances {
-  id: "building_9"
+  id: "building34"
   prototype: "/main/map/buildings/building_03.go"
   position {
     x: 3115.0
@@ -480,7 +480,7 @@ instances {
   }
 }
 instances {
-  id: "building_10"
+  id: "building35"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: 29.0
@@ -500,7 +500,7 @@ instances {
   }
 }
 instances {
-  id: "building_11"
+  id: "building36"
   prototype: "/main/map/buildings/building_03.go"
   position {
     x: 141.0
@@ -560,7 +560,7 @@ instances {
   }
 }
 instances {
-  id: "building_12"
+  id: "building37"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: 2402.0
@@ -660,7 +660,7 @@ instances {
   }
 }
 instances {
-  id: "building_13"
+  id: "building38"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: -152.0
@@ -680,7 +680,7 @@ instances {
   }
 }
 instances {
-  id: "building_14"
+  id: "building39"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: -892.0
@@ -700,7 +700,7 @@ instances {
   }
 }
 instances {
-  id: "building_15"
+  id: "building40"
   prototype: "/main/map/buildings/building_03.go"
   position {
     x: -2564.0
@@ -780,7 +780,7 @@ instances {
   }
 }
 instances {
-  id: "building_16"
+  id: "building41"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: -3232.0
@@ -820,7 +820,7 @@ instances {
   }
 }
 instances {
-  id: "building_17"
+  id: "building42"
   prototype: "/main/map/buildings/building_02.go"
   position {
     x: 457.0
@@ -840,7 +840,7 @@ instances {
   }
 }
 instances {
-  id: "building_18"
+  id: "building43"
   prototype: "/main/map/buildings/building_03.go"
   position {
     x: 287.0
@@ -860,7 +860,7 @@ instances {
   }
 }
 instances {
-  id: "building_2"
+  id: "building27"
   prototype: "/main/map/buildings/building_03.go"
   position {
     x: -2896.0
@@ -1039,7 +1039,7 @@ embedded_instances {
 }
 embedded_instances {
   id: "buildings"
-  children: "building"
+  children: "building0"
   children: "building1"
   children: "building10"
   children: "building11"
@@ -1056,33 +1056,33 @@ embedded_instances {
   children: "building21"
   children: "building22"
   children: "building23"
+  children: "building24"
+  children: "building25"
+  children: "building26"
+  children: "building27"
+  children: "building28"
+  children: "building29"
   children: "building3"
+  children: "building30"
+  children: "building31"
+  children: "building32"
+  children: "building33"
+  children: "building34"
+  children: "building35"
+  children: "building36"
+  children: "building37"
+  children: "building38"
+  children: "building39"
   children: "building4"
+  children: "building40"
+  children: "building41"
+  children: "building42"
+  children: "building43"
   children: "building5"
   children: "building6"
   children: "building7"
   children: "building8"
   children: "building9"
-  children: "building_"
-  children: "building_02"
-  children: "building_03"
-  children: "building_1"
-  children: "building_10"
-  children: "building_11"
-  children: "building_12"
-  children: "building_13"
-  children: "building_14"
-  children: "building_15"
-  children: "building_16"
-  children: "building_17"
-  children: "building_18"
-  children: "building_2"
-  children: "building_4"
-  children: "building_5"
-  children: "building_6"
-  children: "building_7"
-  children: "building_8"
-  children: "building_9"
   data: ""
   position {
     x: 0.0

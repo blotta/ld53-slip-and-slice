@@ -1,13 +1,51 @@
--- function init(self)
+local debugger = require('debugger.debugger')
+debugger.start()
 
---   msg.post("/main#camera", "acquire_camera_focus")
---   msg.post("@render:","use_camera_projection")
---   print("Caaar", go.get_position("/car/car"))
--- end
 
--- function on_message(self, message_id, message)
---   if message_id == hash("set_view_projection") then
---     self.view = message.view
---     self.projection = message.projection
---   end
--- end
+
+go.property('pizzas_to_pickup', 0)
+
+local function requested_pizza(self)
+  local building_id = '/map/building' .. (math.random(self.buildings_count) - 1)
+  while self.waiting_delivery[building_id] do
+    building_id = '/map/building' .. (math.random(self.buildings_count) - 1)
+  end
+
+
+  table.insert(self.waiting_delivery, building_id)
+  self.pizzas_to_pickup = self.pizzas_to_pickup + 1
+  msg.post(building_id .. '#building', 'requested_pizza')
+  msg.post("#pizzas_to_pickup_label", "set_text", {text = "" .. self.pizzas_to_pickup})
+end
+
+function init(self)
+
+  self.buildings_count = 44
+  self.waiting_delivery = {}
+  -- go.set("#pizzas_to_pickup_label", "Text", self.pizzas_to_pickup)
+  -- go.set_text("#pizzas_to_pickup_label", self.pizzas_to_pickup)
+
+  for i = 1, 10, 1 do
+    requested_pizza(self)
+  end
+  for index, b in ipairs(self.waiting_delivery) do
+    print(b)
+  end
+end
+
+function on_message(self, message_id, message, sender)
+  if message_id == hash("trigger_response") then
+    print(message)
+  end
+
+  if message_id == hash('pizza_pickup') then
+    -- message.quantity
+    print('got pizza_pickup message', message)
+  end
+
+  if message_id == hash('picked_up_pizzas') then
+    print('got pizza_pickup message', message)
+    self.pizzas_to_pickup = self.pizzas_to_pickup - message.amount
+    msg.post("#pizzas_to_pickup_label", "set_text", {text = "" .. self.pizzas_to_pickup})
+  end
+end
