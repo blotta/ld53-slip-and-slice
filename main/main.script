@@ -33,7 +33,7 @@ end
 
 local function delivered_pizza(self, building_id)
   for index, value in ipairs(self.waiting_delivery) do
-    print(value, building_id, value == building_id)
+    -- print(value, building_id, value == building_id)
     if value == building_id then
       table.remove(self.waiting_delivery, index)
       break
@@ -42,6 +42,12 @@ local function delivered_pizza(self, building_id)
 
   msg.post('/interface#player_gui', "update_waiting_count",
     { waiting_count = #self.waiting_delivery, building_count = self.buildings_count })
+end
+
+local function pizza_order_timer_cb(self, handle, elapsed)
+  if math.random() > 0.5 then
+    requested_pizza(self)
+  end
 end
 
 function init(self)
@@ -57,6 +63,7 @@ function init(self)
   -- for index, b in ipairs(self.waiting_delivery) do
   --   print(b)
   -- end
+  self.pizza_order_timer = timer.delay(2, true, pizza_order_timer_cb)
 end
 
 function on_message(self, message_id, message, sender)

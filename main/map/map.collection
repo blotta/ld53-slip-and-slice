@@ -4,7 +4,7 @@ instances {
   prototype: "/main/map/buildings/building_01.go"
   position {
     x: -2785.0
-    y: 3120.0
+    y: 3244.0
     z: 0.0
   }
   rotation {
@@ -14,8 +14,8 @@ instances {
     w: 1.0
   }
   scale3 {
-    x: 0.651
-    y: 0.65
+    x: 1.0
+    y: 1.0
     z: 1.0
   }
 }
@@ -150,8 +150,8 @@ instances {
   rotation {
     x: 0.0
     y: 0.0
-    z: -0.83839554
-    w: 0.5450623
+    z: -0.9747375
+    w: -0.22335337
   }
   scale3 {
     x: 1.0
@@ -690,8 +690,8 @@ instances {
   rotation {
     x: 0.0
     y: 0.0
-    z: 0.0
-    w: 1.0
+    z: -0.9143113
+    w: 0.40501213
   }
   scale3 {
     x: 1.0

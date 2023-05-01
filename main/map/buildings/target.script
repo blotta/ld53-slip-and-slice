@@ -4,8 +4,8 @@ function init(self)
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
-  go.animate("#sprite", "scale", go.PLAYBACK_LOOP_PINGPONG, vmath.vector3(1.3, 1.3, 1), go.EASING_OUTBOUNCE, 2)
-  print('building_id', self.building_id)
+  go.animate("#sprite", "scale", go.PLAYBACK_LOOP_PINGPONG, vmath.vector3(0.7, 0.7, 1), go.EASING_OUTBOUNCE, 2)
+  -- print('building_id', self.building_id)
   self.waiting = true
   -- print('I will let the building know when pizza arrives')
 end
@@ -17,12 +17,19 @@ end
 
 function on_message(self, message_id, message, sender)
 
-  if message_id == hash('trigger_response') then
-    if message.enter and self.waiting then
-      print('pizza delivered. Thank you!')
-      msg.post(message.other_id, 'reached_target')
-      self.waiting = false
-    end
-  end
+  -- if message_id == hash('trigger_response') then
+  --   if message.enter then
+  --     print('entered trigger zone', message.other_id, 'waiting:', self.waiting)
+  --   end
+  --   if message.enter and message.other_id == hash('/car/car') and self.waiting then
+  --     print('pizza delivered. Thank you!')
+  --     msg.post(message.other_id, 'reached_target')
+  --   end
+
+  -- end
+
+  -- if message_id == hash('reached_target_confirm') then
+  --     self.waiting = false
+  -- end
 
 end
