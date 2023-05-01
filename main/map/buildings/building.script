@@ -23,11 +23,11 @@ function init(self)
   self.waiting_pizza = false
 end
 
-function update(self, dt)
-  local pos = go.get_position()
-  local to = pos + vmath.normalize(self.target_spawn_dir) * 350
-	msg.post("@render:", "draw_line", { start_point = pos, end_point = to, color = self.tintcolor })
-end
+-- function update(self, dt)
+--   local pos = go.get_position()
+--   local to = pos + vmath.normalize(self.target_spawn_dir) * 350
+-- 	msg.post("@render:", "draw_line", { start_point = pos, end_point = to, color = self.tintcolor })
+-- end
 
 function on_message(self, message_id, message, sender)
 	-- Add message-handling code here
@@ -49,5 +49,9 @@ function on_message(self, message_id, message, sender)
     -- end
 
     -- pprint(ids)
+  end
+
+  if message_id == hash('pizza_delivered') then
+    msg.post('/main#main', 'pizza_delivered', { building_id = go.get_id() })
   end
 end

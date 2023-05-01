@@ -1,21 +1,47 @@
--- local debugger = require('debugger.debugger')
--- debugger.start()
+local debugger = require('debugger.debugger')
+debugger.start()
 
 
 
 go.property('pizzas_to_pickup', 0)
 
+function contains(tbl, el)
+  for _, value in ipairs(tbl) do
+    if el == value then
+      return true
+    end
+  end
+  return false
+end
+
+
 local function requested_pizza(self)
   local building_id = '/map/building' .. (math.random(self.buildings_count) - 1)
-  while self.waiting_delivery[building_id] do
+  -- while self.waiting_delivery[hash(building_id)] do
+  while contains(self.waiting_delivery, hash(building_id)) do
     building_id = '/map/building' .. (math.random(self.buildings_count) - 1)
   end
 
 
-  table.insert(self.waiting_delivery, building_id)
+  table.insert(self.waiting_delivery, hash(building_id))
   self.pizzas_to_pickup = self.pizzas_to_pickup + 1
-  msg.post(building_id .. '#building', 'requested_pizza')
+  msg.post(building_id .. '#building' , 'requested_pizza')
   msg.post("#pizzas_to_pickup_label", "set_text", {text = "" .. self.pizzas_to_pickup})
+  msg.post('/interface#player_gui', "update_waiting_count",
+    { waiting_count = #self.waiting_delivery, building_count = self.buildings_count })
+end
+
+local function delivered_pizza(self, building_id)
+  for index, value in ipairs(self.waiting_delivery) do
+    print(value, building_id, value == building_id)
+    if value == building_id then
+      table.remove(self.waiting_delivery, index)
+      break
+    end
+  end
+
+  msg.post('/interface#player_gui', "update_waiting_count",
+    { waiting_count = #self.waiting_delivery, building_count = self.buildings_count })
 end
 
 function init(self)
@@ -34,18 +60,17 @@ function init(self)
 end
 
 function on_message(self, message_id, message, sender)
-  -- if message_id == hash("trigger_response") then
-  --   print(message)
-  -- end
-
-  -- if message_id == hash('pizza_pickup') then
-  --   -- message.quantity
-  --   print('got pizza_pickup message', message)
-  -- end
 
   if message_id == hash('picked_up_pizzas') then
     -- print('got pizza_pickup message', message)
     self.pizzas_to_pickup = self.pizzas_to_pickup - message.amount
     msg.post("#pizzas_to_pickup_label", "set_text", {text = "" .. self.pizzas_to_pickup})
+  end
+
+  if message_id == hash('pizza_delivered') then
+    -- print('pizza delivered to', message.building_id)
+    -- local b = go.get_id(message.building_id)
+    delivered_pizza(self, message.building_id)
+
   end
 end

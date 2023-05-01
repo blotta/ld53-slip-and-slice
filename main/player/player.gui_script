@@ -23,9 +23,14 @@ function on_message(self, message_id, message, sender)
   if message_id == hash("update_pizza_count") then
     -- set the score counter to new score
     local pizza_count_node = gui.get_node("pizza_count")
-    gui.set_text(pizza_count_node, "PIZZAS: " .. message.pizza_count)
+    gui.set_text(pizza_count_node, "PIZZAS: " .. message.pizza_count .. '/8')
   end
-    print('got message', message_id)
+
+  if message_id == hash("update_waiting_count") then
+    -- set the score counter to new score
+    local node = gui.get_node("waiting_count")
+    gui.set_text(node, "" .. message.waiting_count .. '/' .. message.building_count)
+  end
 end
 
 function on_input(self, action_id, action)

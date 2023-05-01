@@ -1,12 +1,16 @@
+local function set_pizza_count(self, num)
+  self.pizza_count = num 
+  msg.post('/interface#player_gui', "update_pizza_count", { pizza_count = self.pizza_count })
+end
+
 function init(self)
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
   -- local to = vmath.vector3(300, 500, 0)
   -- go.animate(".", "position", go.PLAYBACK_LOOP_PINGPONG, to, go.EASING_OUTSINE, 1)
-  self.pizza_count = 0
   self.max_pizzas = 8
-  msg.post('/interface#player_gui', "update_pizza_count", { pizza_count = self.pizza_count })
+  set_pizza_count(self, 0)
 end
 
 function final(self)
@@ -33,25 +37,31 @@ function fixed_update(self, dt)
 end
 
 function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Learn more: https://defold.com/manuals/message-passing/
-	-- Remove this function if not needed
+
   -- pickup pizzas
   if message_id == hash("trigger_response") then
-    print(message.other_id)
+    print(message.other_id, message.other_group)
     if message.other_id == hash('/main') then
       if message.enter then
         local ptp = go.get('/main#main', 'pizzas_to_pickup')
-        print(ptp .. ' pizzas to pickup')
+        local log = ptp .. ' pizzas to pickup.'
         local cap = self.max_pizzas - self.pizza_count
         ptp = math.min(cap, ptp)
-        self.pizza_count = self.pizza_count + ptp
+        log = log .. ' Picking up ' .. ptp
+        print(log)
         msg.post('/main#main', 'picked_up_pizzas', {amount=ptp})
-        msg.post('/interface#player_gui', "update_pizza_count", { pizza_count = self.pizza_count })
-      else
-        print('delivering pizzas')
+        set_pizza_count(self, self.pizza_count + ptp)
       end
     end
+  end
+
+  if message_id == hash('reached_target') then
+    print('reached target')
+    if self.pizza_count > 0 then
+      set_pizza_count(self, self.pizza_count - 1)
+      go.delete(sender)
+    end
+    
   end
 end
 
