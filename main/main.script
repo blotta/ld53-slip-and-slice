@@ -28,23 +28,23 @@ function init(self)
   for i = 1, 10, 1 do
     requested_pizza(self)
   end
-  for index, b in ipairs(self.waiting_delivery) do
-    print(b)
-  end
+  -- for index, b in ipairs(self.waiting_delivery) do
+  --   print(b)
+  -- end
 end
 
 function on_message(self, message_id, message, sender)
-  if message_id == hash("trigger_response") then
-    print(message)
-  end
+  -- if message_id == hash("trigger_response") then
+  --   print(message)
+  -- end
 
-  if message_id == hash('pizza_pickup') then
-    -- message.quantity
-    print('got pizza_pickup message', message)
-  end
+  -- if message_id == hash('pizza_pickup') then
+  --   -- message.quantity
+  --   print('got pizza_pickup message', message)
+  -- end
 
   if message_id == hash('picked_up_pizzas') then
-    print('got pizza_pickup message', message)
+    -- print('got pizza_pickup message', message)
     self.pizzas_to_pickup = self.pizzas_to_pickup - message.amount
     msg.post("#pizzas_to_pickup_label", "set_text", {text = "" .. self.pizzas_to_pickup})
   end

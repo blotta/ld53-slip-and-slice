@@ -12,11 +12,6 @@ components {
     z: 0.0
     w: 1.0
   }
-  properties {
-    id: "tintcolor"
-    value: "1.0, 1.0, 0.0, 1.0"
-    type: PROPERTY_TYPE_VECTOR4
-  }
 }
 embedded_components {
   id: "sprite"

@@ -59,7 +59,414 @@ collection_instances {
       id: "building"
       properties {
         id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building26"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building28"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building24"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building25"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building1"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
         value: "0.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building2"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building3"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "1.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building4"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building5"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "1.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building6"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building7"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building8"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building31"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building32"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building33"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building10"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building34"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building11"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "1.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building12"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, 0.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building13"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building35"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "1.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building36"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "1.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building14"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building15"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building37"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building16"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building17"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, 0.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building19"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, 0.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building38"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "1.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building39"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building40"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building20"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, 0.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building22"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "-1.0, 0.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building41"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building23"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "1.0, 1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building42"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "0.0, -1.0, 0.0"
+        type: PROPERTY_TYPE_VECTOR3
+      }
+    }
+  }
+  instance_properties {
+    id: "building43"
+    properties {
+      id: "building"
+      properties {
+        id: "target_spawn_dir"
+        value: "1.0, -1.0, 0.0"
         type: PROPERTY_TYPE_VECTOR3
       }
     }
